@@ -1,10 +1,10 @@
-const express = require('express');
-const app = express()
+const server = require('./src/server')
+const {conn} = require('./src/db.js')
+const PORT = 3001
 
-const PORT = 3000;
-
-
-
-app.listen(PORT, ()=>{
-    console.log(`Servidor ejecutándose en http://localhost:${PORT}`)
-})
+conn.sync({ force: true }).then(() => {
+    server.listen(PORT, () => {
+      console.log(`Server listening on port ${PORT}`);
+    })
+    }).catch(error => console.error(error))
+    
