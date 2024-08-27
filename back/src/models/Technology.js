@@ -19,6 +19,10 @@ module.exports= (sequelize)=>{
                 min:1,
                 max:5
             }
+        },
+        image:{
+            type: DataTypes.STRING,
+            allowNull: false
         }
     }, {timestamps: false})
 }
