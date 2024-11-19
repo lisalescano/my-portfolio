@@ -6,6 +6,11 @@ const newProject = async({name, description, date, technology})=>{
     return projectCreated
 }
 
+const getAllProjects = async ()=>{
+    const allProjects = await Project.findAll()
+    return allProjects
+}
+
 module.exports = {
-    newProject
+    newProject, getAllProjects
 }

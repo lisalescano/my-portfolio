@@ -6,7 +6,7 @@ const newTech = async ({name, level, image})=>{
 }
 
 const allTechs = async()=>{
-    const techs = Technology.findAll()
+    const techs = await Technology.findAll()
     return techs
 }
 
