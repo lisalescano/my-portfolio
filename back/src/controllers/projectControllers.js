@@ -1,7 +1,7 @@
 const {Project, Technology} = require('../db')
 
-const newProject = async({name, description, date, technology})=>{
-    const projectCreated = await Project.create({name, description, date})
+const newProject = async({name, description, image, date, technology})=>{
+    const projectCreated = await Project.create({name, description, image, date})
     projectCreated.addTechnology(technology)
     return projectCreated
 }
