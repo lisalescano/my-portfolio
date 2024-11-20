@@ -1,10 +1,12 @@
 const {Router} = require("express");
 const { getAllTechs, postNewTech } = require("../handlers/techHandlers");
-const { getProjects } = require("../handlers/projectHandlers");
+const { getProjects, postNewProject } = require("../handlers/projectHandlers");
 
 const router = Router()
 
 router.get('/projects', getProjects)
+
+router.post('/projects', postNewProject)    
 
 router.get('/technologies', getAllTechs)
 
